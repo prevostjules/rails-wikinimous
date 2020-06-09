@@ -5,11 +5,21 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
+
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1><%= link_to "Wikinimous", articles_path %></h1>
+      <h3><%= link_to "New Article", new_article_path %></h3>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+     <script src="https://kit.fontawesome.com/4420743a0c.js" crossorigin="anonymous"></script>
   </body>
 </html>

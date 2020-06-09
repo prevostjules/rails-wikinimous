@@ -1,8 +1,13 @@
-<h2><%= @article.title %></h2>
+<div class="article__header">
+  <h2><%= @article.title %></h2>
+  <%= link_to edit_article_path(@article) do %>
+    <i class="fa fa-pencil"></i>
+  <% end %>
+  <%= link_to article_path(@article),
+    method: :delete,
+    data: { confirm: "Are you sure?" } do %>
+    <i class="fa fa-trash-o"></i>
+  <% end %>
+</div>
 <p><%= @article.content %></p>
-<%= link_to "Modify", edit_article_path(@article) %>
-<%= link_to "Delete",
-  article_path(@article),
-  method: :delete,
-  data: { confirm: "Are you sure?" } %>
-<%= link_to "Wikinimous", articles_path %>
+

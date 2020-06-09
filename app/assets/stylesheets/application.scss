@@ -1,0 +1,30 @@
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #F8F8F8;
+  margin-bottom: 3rem;
+  a {
+    color: #777;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #6D6D6D;
+  }
+}
+
+.article__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  i {
+    padding: 0.4rem;
+  }
+}
+
+
